@@ -4,9 +4,9 @@
 
 <template>
     <div class="main">
-        <div class="content">
+        <!-- <div class="content">
             <span> Content goes here </span>
-        </div>
+        </div> -->
     </div>
 </template>
 

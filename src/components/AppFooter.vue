@@ -74,6 +74,10 @@ li {
     list-style: none;
     font-size: .9rem;
     color: grey;
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
 }
 
 button {
