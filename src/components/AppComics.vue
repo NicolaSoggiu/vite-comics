@@ -91,7 +91,7 @@ export default {
     <div>
       <div class="main-content">
         <div class="heroes"></div>
-		<div class="contain">
+		<div class="container">
         <div class="comics">
           <AppCardComics
             v-for="comic in arrComics"
