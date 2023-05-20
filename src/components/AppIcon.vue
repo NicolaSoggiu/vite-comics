@@ -35,6 +35,7 @@
         justify-content: center;
         gap: 3rem;
         img {
+            
             width: 50px;
             height: 60px;
         }

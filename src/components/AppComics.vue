@@ -92,6 +92,9 @@ export default {
       <div class="main-content">
         <div class="heroes"></div>
 		<div class="container">
+			<div class="top-btn">
+		<span class="current">CURRENT SERIES</span>
+		</div>
         <div class="comics">
           <AppCardComics
             v-for="comic in arrComics"
@@ -111,9 +114,14 @@ export default {
 
 <style lang="scss" scoped>
 
-	
+.current {
+	padding: .8rem 2rem;
+	color: white;
+	background-color: #0282F9;
+}
+
    main {
-    height: 140vh;
+    height: 120vh;
     background-color: black;
 
 	.container {
@@ -136,10 +144,14 @@ export default {
 		justify-content: center;
 		.button {
 			background-color: #0282F9;
-			margin-top: 3rem;
+			margin-top: 2rem;
 			padding-top: .5rem;
 			padding-bottom: .5rem;
 			padding-inline: 2rem;
+			&:hover {
+				cursor: pointer;
+				color: white;
+			}
 		}
 	}
    }
