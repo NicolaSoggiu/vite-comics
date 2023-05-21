@@ -1,5 +1,57 @@
 <script>
+    import AppHeaderNav from './AppHeaderNav.vue';
 
+export default {
+    data() {
+        return {
+                navArray: [
+            {
+                string: 'CHARACTERS',
+                link: '#'
+            },
+            {
+                string: 'COMICS',
+                link: '#'
+            },
+            {
+                string: 'MOVIE',
+                link: '#'
+            },
+            {
+                string: 'TV',
+                link: '#'
+            },
+            {
+                string: 'GAMES',
+                link: '#'
+            },
+            {
+                string: 'COLLECTIBLES',
+                link: '#'
+            },
+            {
+                string: 'VIDEOS',
+                link: '#'
+            },
+            {
+                string: 'FANS',
+                link: '#'
+            },
+            {
+                string: 'NEWS',
+                link: '#'
+            },
+            {
+                string: 'SHOP',
+                link: '#'
+            }
+        ]
+            }
+    },
+            components: {
+                AppHeaderNav
+                }
+    }
 </script>
 
 <template>
@@ -8,32 +60,12 @@
             <img src="../assets/img/dc-logo.png" alt="">
         </div>
         <div class="voices">
-            <ul>
-                <li>CHARACTERS</li>
-                <li>COMICS</li>
-                <li>MOVIES</li>
-                <li>TV</li>
-                <li>GAMES</li>
-                <li>COLLECTIBLES</li>
-                <li>VIDEOS</li>
-                <li>FANS</li>
-                <li>NEWS</li>
-                <li>SHOP</li>
-            </ul>
+            <AppHeaderNav v-for="navString in navArray" :navString="navString.string" :link="navString.link"/>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
-li {
-    list-style: none;
-    &:hover {
-            cursor: pointer;
-            color: blue;
-        }
-}
-
 .nav {
     height: 10vh;
     display: flex;
