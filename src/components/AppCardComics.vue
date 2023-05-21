@@ -19,7 +19,10 @@ export default {
 
    .card {
     width: calc((100% - 5rem) / 6 );
-   }
+    &:hover {
+        cursor: pointer;
+        }
+    }
 
    img {
     width: 100%;
@@ -28,5 +31,8 @@ export default {
 
    h5 {
     color: grey;
-   }
+    &:hover {
+        color: white;
+        }
+    }
 </style>

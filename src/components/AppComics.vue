@@ -92,47 +92,50 @@ export default {
       <div class="main-content">
         <div class="heroes"></div>
 		<div class="container">
-			<div class="top-btn">
-		<span class="current">CURRENT SERIES</span>
-		</div>
-        <div class="comics">
-          <AppCardComics
-            v-for="comic in arrComics"
-            :key="comic.series"
-            :urlImg="comic.thumb"
-            :series="comic.series"
-          />
-        </div>
-        <div class="more">
-          <span class="button">LOAD MORE</span>
-        </div>
-      </div>
-	</div>
+			<span class="current">CURRENT SERIES</span>
+        	<div class="comics">
+          		<AppCardComics
+            	v-for="comic in arrComics"
+            	:key="comic.series"
+            	:urlImg="comic.thumb"
+            	:series="comic.series"
+          		/>
+        	</div>
+        	<div class="more">
+          	<span class="button">LOAD MORE</span>
+        	</div>
+      	</div>
+	  </div>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
 
-.current {
-	padding: .8rem 2rem;
-	color: white;
-	background-color: #0282F9;
-}
+
 
    main {
     height: 120vh;
-    background-color: black;
-
-	.container {
-		max-width: 1000px;
-		margin-inline: auto;
-	}
-    .heroes {
+    background-color: #1C1C1C;
+	.heroes {
         height: 40vh;
         background-image: url("../assets/img/jumbotron.jpg");
         background-size: cover ;
     }
+
+	.container {
+		max-width: 1000px;
+		margin-inline: auto;
+		.current {
+			padding: .8rem 2rem;
+			color: white;
+			background-color: #0282F9;
+			&:hover {
+				color: black;
+				cursor: pointer;
+			}
+		}
+	}
 	.comics {
 		display: flex;
   		flex-wrap: wrap;
@@ -144,7 +147,7 @@ export default {
 		justify-content: center;
 		.button {
 			background-color: #0282F9;
-			margin-top: 2rem;
+			margin-top: 1.2rem;
 			padding-top: .5rem;
 			padding-bottom: .5rem;
 			padding-inline: 2rem;
@@ -158,3 +161,4 @@ export default {
 </style>
 
 
+	
